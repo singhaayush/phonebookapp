@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+
+    <meta charset="utf-8">
+     <link rel="stylesheet" href="/css/allRecords.css" type="text/css">
+    <title></title>
+  </head>
+  <body>
+    <center><div><a href="/">Add User</a></div></center>
+    <div class="upperSearchDiv">
+      <form class="" action="/singleUser" method="get">
+        <input type="text" name="searchUser" value="" placeholder="search by name" id="search_bar"/>
+        <input type="submit" name="search_btn" value="Search"/>
+      </form>
+    </div>
+    <table>
+
+        <th>
+        <td class="header">User name</td>
+        <td class="header">DOB</td>
+        <td class="header">Phone Number</td>
+        <td class="header">email</td>
+        <td class="header">Delete</td>
+          <td class="header">edit</td>
+      </th>
+        <%for(var i=0;i<contacts.length ; i++)
+        {%><tr>
+          <td><%=contacts[i]. userName%></td>
+            <td><%=contacts[i].dateOfBirth%></td>
+              <td><%=contacts[i].phoneNumber%></td>
+                <td><%=contacts[i].email%></td>
+                <td> <button type="button" name="button">Delete</button> </td>
+                <td><button type="button" name="button">Edit</button></td>
+               </tr>
+        <%}
+        %>
+
+
+    </table>
+  </body>
+</html>
